@@ -39,7 +39,7 @@ function HomePage() {
             <section className="home-hero">
                 <div className="home-container">
                     <div className="hero-content">
-                        <h1>Welcome to Our Education Platform</h1>
+                        <h1>WWelcome to Our Education Platform</h1>
                         <p>Unlock your potential with our diverse range of courses and learning resources.</p>
                     </div>
                 </div>
