@@ -21,7 +21,7 @@ function PaymentPage() {
    
    async function createOrder(params){
              const formdata = new FormData()
-             formdata.append('price',1)
+             formdata.append('price',data.price)
                  return await axios.post('https://skystarter.pythonanywhere.com/enroll/create_order/',formdata,{
                     headers:{
                         'Authorization': `Bearer ${Cookies.get('token')}`,
