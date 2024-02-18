@@ -639,13 +639,13 @@ p {
 
     .animation {
         width: 100%;
-        max-width: 300px;
-        height: 300px;
+        max-width: 100px;
+        height: 100px;
         margin-bottom: 20px;
     }
     .animation img {
-        height: 300px;
-        width: 300px;
+        height: 100px;
+        width: 100px;
      }
 
     .form-container {
@@ -671,8 +671,9 @@ p {
     flex-direction: column;
     text-align: center;
     margin-top: 10px;
+    padding-bottom: 20px;
     background-color: rgb(194, 237, 245) ;
-    height: 85vh;
+    height: max-content;
     width: 90%;
     border-radius: 8px;
     box-shadow: 5px 8px 8px #d1d3d1;
@@ -694,6 +695,51 @@ p {
 }
 #course-desc p{
    width: 50%;
+}
+
+@media only screen and (max-width:400px) {
+    *{
+    
+        margin: 10;
+        padding: 0;
+    }
+    
+    #course-details-container{
+        display: flex;
+        justify-content: center;
+       
+    }
+    #course-detail{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 10px;
+        background-color: rgb(194, 237, 245) ;
+        height: max-content;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        width: 90%;
+        border-radius: 8px;
+        box-shadow: 5px 8px 8px #d1d3d1;
+    
+    }
+    #course-image img{
+        margin-top: 10px;
+        border-radius: 10px;
+        width: 300px;
+    
+    }
+    
+    #course-title{
+         margin-top: 10px;
+    }
+    #course-desc{
+        display: flex;
+        justify-content: center;
+    }
+    #course-desc p{
+       width: 50%;
+    }
 }
   
   

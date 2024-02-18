@@ -71,13 +71,7 @@ function PaymentPage() {
       const rzp1 = new Razorpay(options);
     
       rzp1.on("payment.failed", function (response) {
-        alert(response.error.code);
         alert(response.error.description);
-        alert(response.error.source);
-        alert(response.error.step);
-        alert(response.error.reason);
-        alert(response.error.metadata.order_id);
-        alert(response.error.metadata.payment_id);
       });
     
       rzp1.open();
@@ -96,7 +90,7 @@ function PaymentPage() {
                 <div id="course-desc">
                     <p>{data.course_desc}</p>
                 </div>
-               <span>{data.course_duration}</span><span>{data.price}</span>
+                <span>{data.course_duration}</span><span>{data.price}</span>
                 
                <button className='button' onClick={handlePayment}>PayNow</button>
             </div>
