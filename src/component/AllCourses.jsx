@@ -35,7 +35,7 @@ const AllCoursesPage = () => {
             <div key={course.id} className="course-item">
               <img src={'https://skystarter.pythonanywhere.com/'+course.course_img} alt={course.course_img} />
               <h3>{course.course_title}</h3>
-              <p>{course.course_desc}</p>
+              {/* <p>{course.course_desc}</p> */}
               <p>{course.course_duration}</p>
               {/* <p>{course.price}</p> */}
              <button onClick={()=>{
@@ -50,13 +50,13 @@ const AllCoursesPage = () => {
             </div>
           ))}
         </div>
-        <h2>Popular Courses</h2>
+        <h2>All Courses</h2>
         <div className="course-list">
           {courses.length>0 && courses.map(course => (
             <div key={course.id} className="course-item">
               <img src={'https://skystarter.pythonanywhere.com/'+course.course_img} alt={course.course_img} />
               <h3>{course.course_title}</h3>
-              <p>{course.course_desc}</p>
+              {/* <p>{course.course_desc}</p> */}
               <p>{course.course_duration}</p>
               {/* <p>{course.price}</p> */}
              <button onClick={()=>{

@@ -1,6 +1,7 @@
 
 
 *{
+    
     margin: 0;
     padding: 0;
 }
@@ -389,97 +390,83 @@ nav {
 
 /* Css for about page*/
 
-/* Global styles */
-.about-container {
+
+.about-card {
+    font-family: 'Poppins', sans-serif;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: #77d3ef;
-    max-width: 80%;
-    margin: 0 auto;
-    padding: 0 20px;
-    border: .5px solid rgb(88, 88, 88);
-    border-radius: 10px;
-    box-shadow: 12px 8px 8px grey;
+    flex-direction: row;
+    justify-content: space-evenly;
+   
+}
+.about-center{
+    margin: auto;
+    width: 50%;
+    padding: 30px;
 }
 
-.about-page {
-    padding-top: 50px; /* Adjust as needed */
+.about-center p{
+    text-align: start;
+   
 }
-
-/* Hero Section */
-.about-hero {
-    
-    padding: 50px 0;
-    text-align: center;
-    color: black;
+.custom-card {
+    background-color: #f1f6f9; /* Nude color */
+    border: .3px solid #a09b96; /* Border color */
 }
 
 
-.about-container h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+.reverse {
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
-.about-container p {
-    font-size: 1.2rem;
-    
+.left-card {
+    width: 40%;
+    text-align: left;
+    padding: 50px;
 }
 
-/* Mission Section */
-.mission {
-    padding: 50px 0;
+.right-card {
+    width: 60%;
 }
 
-.mission h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
+.card-image {
+    width: 100%;
 
-.mission p {
-    font-size: 1.1rem;
-    color: #333;
-}
-
-/* Values Section */
-.values {
-    padding: 50px 0;
-}
-
-.values h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.values ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.values li {
-    font-size: 1.1rem;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-/* Team Section */
-.team {
-    padding: 50px 0;
-}
-
-.team h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.team p {
-    font-size: 1.1rem;
-    color: #333;
 }
 
 
 
+@media screen and (max-width:700px) {
+    /* .form {
+        padding-left: 20%;
+        padding-right: 20%;
+    } */
+   
+    .about-card {
+        background-color: aliceblue;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .left-card {
+        width: 100%;
+        text-align: left;
+        padding: 50px;
+    }
+
+    .right-card {
+        width: 100%;
+    }
+    .reverse {
+        background-color: aliceblue;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-evenly;
+    }
+}
 
 
 /* css for the all courses page */

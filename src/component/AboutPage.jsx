@@ -1,46 +1,57 @@
-import React from 'react';
-import './Style.css'; // Import your CSS file for styling
-
+import React from 'react'
+import img from './image/img.png'
+import mission from './image/mission.png'
+import vision from './image/vision.png'
+import team from './image/team.png'
 function AboutPage() {
-    return (
-        <div className="about-page">
-            {/* Hero Section */}
-            <section className="about-hero">
-                <div className="about-container">
-                    <p>Sky Starter Education Portal is dedicated to providing accessible and high-quality education for all. With diverse courses, experienced instructors, and personalized learning, we aim to inspire curiosity and foster lifelong learning opportunities for learners of all ages and backgrounds</p>
-                </div>
-            </section>
+  return (
+    <>
+    <div className='about-card'>
+                <div className='left-card about-center'>
+                    <h2>SkyStarter Education Community </h2>
+                    <p>Sky Starter Education Portal is dedicated to providing accessible and high-quality education for all. With diverse courses, experienced instructors, and personalized learning, we aim to inspire curiosity and foster lifelong learning opportunities for learners of all ages and backgrounds.
 
-            {/* Mission Section */}
-            <section className="mission">
-                <div className="about-container">
-                    <h2>Our Mission</h2>
-                    <p>"At Sky Starter Education Portal, our mission is deeply rooted in the belief that education is the key to unlocking human potential and driving positive change in the world. We are committed to democratizing access to quality education by providing a comprehensive platform that empowers learners of all ages, backgrounds, and circumstances to pursue their educational goals and aspirations.<br/><br/>Our primary objective is to create an inclusive and engaging learning environment where individuals can explore, discover, and grow intellectually, professionally, and personally. We strive to offer a diverse range of courses, programs, and resources that cater to the unique needs, interests, and learning styles of our global community.<br/><br/>Central to our mission is the belief that education should be accessible, flexible, and relevant to the evolving needs of learners in today's rapidly changing world. Through innovative technologies, interactive content, and dynamic learning experiences, we aim to inspire curiosity, foster critical thinking skills, and cultivate a lifelong love of learning.<br/><br/>Furthermore, we are dedicated to fostering a supportive and collaborative community where learners can connect, share ideas, and support each other on their educational journeys. By promoting diversity, equity, and inclusion, we strive to create a welcoming and empowering environment where all individuals feel valued, respected, and empowered to succeed.<br/><br/>Furthermore, we are dedicated to fostering a supportive and collaborative community where learners can connect, share ideas, and support each other on their educational journeys. By promoting diversity, equity, and inclusion, we strive to create a welcoming and empowering environment where all individuals feel valued, respected, and empowered to succeed."</p>
+</p>
                 </div>
-            </section>
-
-            {/* Values Section */}
-            <section className="values">
-                <div className="about-container">
-                    <h2>Our Values</h2>
-                    <ul>
-                        <li>Quality Education</li>
-                        <li>Accessibility</li>
-                        <li>Innovation</li>
-                        {/* Add more values as needed */}
-                    </ul>
+                <div className='right-card'>
+                    <img src={img} className='card-image'></img>
                 </div>
-            </section>
-
-            {/* Team Section */}
-            <section className="team">
-                <div className="about-container">
-                    <h2>Meet Our Team</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum, lorem et bibendum aliquet, enim purus convallis ligula, nec pretium dolor est sit amet mi.</p>
+            </div>
+            <div className='reverse'>
+                <div className='left-card'>
+                    <img src={mission} className='card-image'></img>
                 </div>
-            </section>
-        </div>
-    );
+                <div className='right-card about-center'>
+                    <h1>Our Mission</h1>
+                    <p>
+                    At Sky Starter Education Portal, our mission is deeply rooted in the belief that education is the key to unlocking human potential and driving positive change in the world. We are committed to democratizing access to quality education by providing a comprehensive platform that empowers learners of all ages, backgrounds, and circumstances to pursue their educational goals and aspirations.
+                    </p>
+                </div>
+            </div>
+            <div className='about-card'>
+                <div className='left-card about-center'>
+                    <h1>Our Vision</h1>
+                    <p>
+                    At SkyStarter, we envision a world where quality education is accessible to all, transcending barriers of geography and circumstance. Our platform aims to empower lifelong learners with personalized, innovative learning experiences, fostering curiosity, adaptability, and excellence. We aspire to be the leading destination for knowledge, inspiration, and transformation, democratizing access to education and enabling individuals to reach their full potential.
+                    </p>
+                </div>
+                <div className='right-card'>
+                    <img src={vision} className='card-image'></img>
+                </div>
+            </div>
+            <div className='reverse'>
+                <div className='left-card'>
+                    <img src={team} className='card-image'></img>
+                </div>
+                <div className='right-card about-center'>
+                    <h1>Our Team</h1>
+                    <p>
+                    At SkyStarter, we're dedicated to providing accessible and transformative education for all. Our team fosters innovation, collaboration, and excellence to empower learners worldwide. Together, we're redefining education and inspiring lifelong growth and success.
+                    </p>
+                </div>
+            </div>
+    </>
+  )
 }
 
-export default AboutPage;
+export default AboutPage
