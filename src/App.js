@@ -6,9 +6,9 @@ import ContactPage from "./component/ContactPage";
 import SignInForm from "./component/SignInForm";
 import SignUpForm from "./component/SignUpForm";
 import AllCoursesPage from "./component/AllCourses";
-import AddCourseForm from "./component/AddCourse";
 import Payment from "./component/Payment";
 import CongratulationsPage from "./component/Congrates";
+import UserProfile from "./component/UserProfile";
 
 
 function App() {
@@ -22,7 +22,6 @@ function App() {
       <Route path="/signin" element={<SignInForm></SignInForm>}></Route>
       <Route path="/signup" element={<SignUpForm></SignUpForm>}></Route>
       <Route path="/courses" element={<AllCoursesPage></AllCoursesPage>}></Route>
-      <Route path="/addcourse" element={<AddCourseForm></AddCourseForm>}></Route>
       <Route path="/payment" element={<Payment></Payment>}></Route>
       <Route path="/congrates" element={<CongratulationsPage></CongratulationsPage>}></Route>
     </Routes>

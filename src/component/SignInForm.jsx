@@ -54,24 +54,25 @@ function SignInForm() {
             Cookies.set('token',response.data['token']['access'])
             Cookies.set('userEmail',response.data['userEmail'])
             Cookies.set('userName',response.data['username'])
+            Cookies.set('dp',response.data['dp'])
             setTimeout(()=>{
             Cookies.set('isLoggedin','false')
             Cookies.set('token',null)
             Cookies.set('userEmail',null)
             Cookies.set('userName',null)
-            },180000)
+            },86395000)
             navigate('/')
           }
           
 
         } catch(error) {
-            console.log(error.response.data)
+            console.log(error.response)
             if(error.response.data['msg']=='You are not autherized user' || error.response.data['msg']==='Not Autherized')
             {
                 setErrorMessage('Enter valid email address and password')
             }
             else{
-                console.log(error.response.data.errors)
+                console.log(error.response.data)
 
             }
         }

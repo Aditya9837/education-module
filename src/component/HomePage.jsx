@@ -9,6 +9,7 @@ import student2 from './image/student2.jpg'
 
 function HomePage() {
     const [topCourses, setTopCourses] = useState([]);
+    const [isLoading, setIsLoading] = useState(false);
     const nevigate = useNavigate()
 
     useEffect(() => {
@@ -18,7 +19,7 @@ function HomePage() {
 
                 // Assuming the response data is an array of courses
                 const coursesData = response.data['data'];
-               
+
                 // Sort the courses based on some criteria, such as popularity or rating
                 coursesData.sort((a, b) => b.popularity - a.popularity);
 
@@ -29,10 +30,19 @@ function HomePage() {
             }
         };
 
-        fetchTopCourses();
+        fetchTopCourses().then(() => {
+            setIsLoading(false)
+        });
     }, []);
-      
-   
+
+    const handlePayment = course => {
+        if (Cookies.get('isLoggedin') === 'true') {
+            nevigate('/payment', { state: { 'data': course } });
+        } else {
+            nevigate('/signin');
+        }
+    };
+
     return (
         <div className="home-page">
             {/* Hero Section */}
@@ -50,22 +60,14 @@ function HomePage() {
                 <div className="home-container">
                     <h2>Popular Courses</h2>
                     <div className="course-list">
-                        {topCourses.map(course => (
-                            <div key={course.id} className="course-item" onClick={()=>{
-                                if(Cookies.get('isLoggedin')==='true')
-                                {
-                                  nevigate('/payment',{state:{'data':course}})
-                                }
-                                else{
-                                  nevigate('/signin')
-                                }
-                               }}>
-                                <img src={'https://skystarter.pythonanywhere.com/'+course.course_img} alt={course.course_img} />
+                        {isLoading ? (
+                            <div>Loading...</div>
+                        ) : topCourses.map(course => (
+                            <div key={course.id} className="course-item">
+                                <img src={'https://skystarter.pythonanywhere.com/' + course.course_img} alt={course.course_img} />
                                 <h3>{course.course_title}</h3>
-                                {/* <p>{course.course_desc}</p> */}
                                 <p>{course.course_duration}</p>
-                                <button 
-                              className='button'>Enroll Now</button>
+                                <button onClick={() => handlePayment(course)} className='button'>INR&nbsp;{course.price}</button>
                             </div>
                         ))}
                     </div>
@@ -101,28 +103,28 @@ function HomePage() {
 
             {/* Footer */}
             <footer class="footer">
-    <div class="footer-container">
-        <div class="footer-links">
-            <ul>
-                <li><a href="/about">About Us</a></li>
-                <li><a href="/contact">Contact Us</a></li>
-                <li><a href="/terms">Terms of Service</a></li>
-                <li><a href="/privacy">Privacy Policy</a></li>
-            </ul>
-        </div>
-        <div class="social-media">
-            <ul>
-                <li><a href="https://facebook.com"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="https://twitter.com"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="https://instagram.com"><i class="fa fa-instagram"></i></a></li>
-                
-            </ul>
-        </div>
-        <div class="copyright">
-            <p>&copy; 2024 Your Education Platform. All rights reserved.</p>
-        </div>
-    </div>
-</footer>
+                <div class="footer-container">
+                    <div class="footer-links">
+                        <ul>
+                            <li><a href="/about">About Us</a></li>
+                            <li><a href="/contact">Contact Us</a></li>
+                            <li><a href="/terms">Terms of Service</a></li>
+                            <li><a href="/privacy">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="social-media">
+                        <ul>
+                            <li><a href="https://facebook.com"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="https://twitter.com"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="https://instagram.com"><i class="fa fa-instagram"></i></a></li>
+
+                        </ul>
+                    </div>
+                    <div class="copyright">
+                        <p>&copy; 2024 Your Education Platform. All rights reserved.</p>
+                    </div>
+                </div>
+            </footer>
 
         </div>
     );
