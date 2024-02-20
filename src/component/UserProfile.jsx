@@ -6,10 +6,11 @@ import axios from 'axios';
 import logo from './image/logo.png'
 import user from './image/user.png'
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
-function Dashboard() {
+function Dashboard(props) {
     const [userData, setUserData] = useState(null);
-
+    const navigate = useNavigate();
     useEffect(() => {
         // Fetch user data from API endpoint
         fetch('https://skystarter.pythonanywhere.com/api/user/dashboard/', {
@@ -56,7 +57,7 @@ function Dashboard() {
                     "Content-Type": 'multipart/form-data',
                 }
             }).then(response => {
-                
+
             });
 
             // Update user data or refresh page if needed
@@ -68,9 +69,17 @@ function Dashboard() {
     if (!userData) {
         return <div className="loading dashboard-container">Loading...</div>;
     }
+    const handleCourse = (data) => {
+        if (Cookies.get('isLoggedin') === 'true') {
+          navigate('/enrolled', { state: { 'data': data } });
+        } else {
+          navigate('/signin');
+        }
+      };
 
     return (
         <div className="dashboard-container">
+            {<div >{props.cross}</div>}
             <div className='user-profile'>
                 <div className='user_profile-left'>
                     <div><h3>{userData.username}</h3></div>
@@ -104,7 +113,7 @@ function Dashboard() {
                 userData.enrolled_courses.length > 0 ? userData.enrolled_courses.map(data => {
                     return (
                         <>
-                            <p><i class="ri-arrow-right-double-fill"></i>&nbsp;{data.course.course_title}</p>
+                          <p> <i class="ri-arrow-right-double-fill"></i>&nbsp; <button className='course-button' onClick={()=>handleCourse(data.course)}>{data.course.course_title}</button></p>
                         </>
                     )
                 }) : <p>No Enrolled Courses&nbsp;<Link to='/courses'>Enroll Now</Link></p>
@@ -122,9 +131,16 @@ function Dashboard() {
             }
 
             <hr />
-            <Link>Sign Out</Link>
+        <button className='btn btn-warning'  onClick={() => {
+                                    Cookies.set('isLoggedin', 'false')
+                                    Cookies.set('token', null)
+                                    Cookies.set('userEmail', null)
+                                    Cookies.set('userName', null)
+                                    navigate('/signin')
+                                }}>Sign Out</button>
         </div>
     );
 }
 
 export default Dashboard;
+

@@ -122,15 +122,17 @@ nav {
 }
 .profile-pic{
    float: right;
-    width: 40px;
-    height: 40px;
+    width: max-content;
+    height: 35px;
     font-size: 20px;
     padding-left: 8px;
     padding-right: 8px;
     font-weight: bolder;
-    border-radius: 50%;
-    color: black;
-    background-color: white;
+    border-radius: 5px;
+    color: rgb(79, 78, 78);
+    background-color: rgb(212, 208, 208);
+    border: none;
+    text-transform: capitalize;
 }
 
   .profile-logo:hover{
@@ -141,6 +143,22 @@ nav {
     border-radius: 50%;
     color: white;
     background-color: black;
+  }
+  .cart-icon{
+    width: 30px;
+    /* background-color: white; */
+  }
+ 
+  .cart-bindi{
+    position: absolute;
+    margin-left: -10px;
+    font-size: xx-small;
+    text-align: center;
+    border: none;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: white;
   }
 
 .menu-toggle {
@@ -225,14 +243,16 @@ nav {
     font-size: 2.5rem;
 }
 .home-hero {
-    background-color: #f8f9fa;
+    /* background-image: url(./image/homehero.jpeg); */
+    height: 100vh;
+    background-size: cover;
     padding: 100px 0;
     text-align: center;
 }
 
 .home-hero h1 {
     background: linear-gradient(45deg,rgb(131, 221, 237),#09bbf1);
-    color: transparent; /* Change to orange color on hover */
+    color: transparent; 
     background-clip: text;
     font-size: 3rem;
     font-family:fantasy
@@ -240,12 +260,17 @@ nav {
 
 .home-hero p {
     font-size: 1.2rem;
-    color: #666;
+    color: grey;
+    
 }
 
 /* Courses Section */
 .courses {
     padding: 50px 0;
+    background-size: cover;
+}
+body{
+    background-image: url(./image/homehero.jpeg);
 }
 
 .course-list {
@@ -428,6 +453,7 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    background-color: #fdfefd;
    
 }
 .about-center{
@@ -503,7 +529,6 @@ nav {
 /* AllCoursesPage.css */
 
 .courses {
-    background-color: #f9f9f9;
     padding: 60px 0;
   }
   
@@ -774,27 +799,33 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: end;
-    right: 0;
     width: 30%;
 /* Adjust margin as needed */
     padding: 20px;
-    background-color: #95d4e0;
-    border-radius: 10px;
+    margin-top: 5px;
+    right: 60px;
+    background-color: rgb(249, 248, 248);
+    box-shadow: 10px 8px 12px 8px rgb(225, 224, 224);
+    border-radius: 5px;
+    border: .5px black;
     z-index: 99999;
 }
-.dashboard-container a{
-  text-decoration: none;
-  color: rgb(4, 51, 59);
-  font-size: larger;
-  font-weight: bold;
-  opacity: .8;
+.dashboard-container p{
+    text-align: start;
+    line-height: 1px;
 }
-.dashboard-container a:hover{
+.course-button{
     text-decoration: none;
-    color: rgb(4, 32, 37);
-    font-size: 20px;
-    font-weight: bold;
-  }
+    background-color: transparent;
+    color: rgb(50, 162, 210);
+    border: none;
+}
+.course-button:hover{
+    text-decoration: none;
+    background-color: transparent;
+    color: rgb(4, 77, 108);
+    border: none;
+}
 .user-profile{
     display: flex;
     justify-content: space-between;
@@ -802,7 +833,7 @@ p {
 .user_profile-left{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     text-align: left;
 }
 .user-profile-right {
@@ -816,8 +847,10 @@ p {
 
 
 
-.right{
+.cross-right{
     float: right;
+    font-weight: bolder;
+    font-size: large;
 }
 
 .user_profile-right img{
@@ -864,8 +897,13 @@ p {
     justify-content: center;
     width: 40%;
     padding: 20px;
-    background-color: #95d4e0;
-    border-radius: 10px;
+    margin-top: 5px;
+    right: 60px;
+    background-color: rgb(249, 248, 248);
+    box-shadow: 10px 8px 12px 8px rgb(225, 224, 224);
+    border-radius: 5px;
+    border: .5px black;
+
     }
 }
 @media only screen and (max-width:950px) {
@@ -875,8 +913,13 @@ p {
     justify-content: center;
     width: 50%;
     padding: 20px;
-    background-color: #95d4e0;
-    border-radius: 10px;
+    margin-top: 5px;
+    right: 60px;
+    background-color: rgb(249, 248, 248);
+    box-shadow: 10px 8px 12px 8px rgb(225, 224, 224);
+    border-radius: 5px;
+    border: .5px black;
+
     }
 }
 @media only screen and (max-width:768px) {
@@ -886,7 +929,18 @@ p {
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    background-color: #95d4e0;
-    border-radius: 10px;
+    margin-top: 5px;
+    background-color: rgb(249, 248, 248);
+    box-shadow: 10px 8px 12px 8px rgb(225, 224, 224);
+    border-radius: 5px;
+    border: .5px black;
+
     }
 }
+
+
+
+
+
+
+

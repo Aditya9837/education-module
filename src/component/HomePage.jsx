@@ -49,8 +49,8 @@ function HomePage() {
             <section className="home-hero">
                 <div className="home-container">
                     <div className="hero-content">
-                        <h1>Welcome to Our Education Platform</h1>
-                        <p>Unlock your potential with our diverse range of courses and learning resources.</p>
+                        <h1>Elevate Your Career: The Ultimate Training and Placements Platform</h1>
+                        <p>"Transform Your Career: Your Ultimate Training and Placements Hub" is your go-to destination for career advancement. Explore top-notch training modules, gain practical skills, and access career resources tailored to your success. Join a vibrant community of professionals, and take your career to new heights with us</p>
                     </div>
                 </div>
             </section>

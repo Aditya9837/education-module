@@ -56,25 +56,25 @@ const AllCoursesPage = () => {
   return (
     <section id="courses" className="courses">
       <div className="course-container">
-        {Cookies.get('isLoggedin')!=='true'?<></>:<>
-        <h2>Enrolled Courses</h2>
-        <div className="course-list">
-          {isLoading ? (
-            <div>Loading...</div>
-          ) : enrolledcourses.length > 0 ? (
-            enrolledcourses.map((data) => (
-              <div key={data.course.id} className="course-item">
-                <img src={'https://skystarter.pythonanywhere.com/' + data.course.course_img} alt={data.course.course_img} />
-                <h3>{data.course.course_title}</h3>
-                <p>{data.course.course_duration}</p>
-              </div>
-            ))
-          ) : (
-            <div>No enrolled courses available</div>
-          )}
-        </div>
+        {Cookies.get('isLoggedin') !== 'true' ? <></> : <>
+          <h2>Enrolled Courses</h2>
+          <div className="course-list">
+            {isLoading ? (
+              <div>Loading...</div>
+            ) : enrolledcourses.length > 0 ? (
+              enrolledcourses.map((data) => (
+                <div key={data.course.id} className="course-item">
+                  <img src={'https://skystarter.pythonanywhere.com/' + data.course.course_img} alt={data.course.course_img} />
+                  <h3>{data.course.course_title}</h3>
+                  <p>{data.course.course_duration}</p>
+                </div>
+              ))
+            ) : (
+              <div>No enrolled courses available</div>
+            )}
+          </div>
         </>
-        
+
         }
         <h2>All Courses</h2>
         <div className="course-list">

@@ -115,7 +115,8 @@ function PaymentPage() {
                 </div>
                 <span>{data.course_duration}</span><span>{data.price}</span>
                 
-               <button className='button' onClick={handlePayment}>PayNow</button>
+               <button className='button' onClick={handlePayment}>PayNow</button><br/>
+               <button className='button' >Add To Cart</button>
             </div>
 
          </div>

@@ -9,6 +9,7 @@ import AllCoursesPage from "./component/AllCourses";
 import Payment from "./component/Payment";
 import CongratulationsPage from "./component/Congrates";
 import UserProfile from "./component/UserProfile";
+import Enrolled from "./component/Enrolled";
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
       <Route path="/courses" element={<AllCoursesPage></AllCoursesPage>}></Route>
       <Route path="/payment" element={<Payment></Payment>}></Route>
       <Route path="/congrates" element={<CongratulationsPage></CongratulationsPage>}></Route>
+      <Route path="/enrolled" element={<Enrolled></Enrolled>}></Route>
     </Routes>
     </>
   );
