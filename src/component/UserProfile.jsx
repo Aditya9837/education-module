@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Cookies from 'js-cookie';
 import './Style.css'; // Import CSS file for styling
-import { FaUserPlus, FaBell } from 'react-icons/fa'; // Import the add icon from react-icons/fa
+import { FaUserPlus,  } from 'react-icons/fa'; // Import the add icon from react-icons/fa
 import axios from 'axios';
-import logo from './image/logo.png'
 import user from './image/user.png'
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
@@ -88,8 +87,8 @@ function Dashboard(props) {
                 </div>
                 <div className="user_profile-right">
                     {
-                        userData.dp!==null?  <img src={'https://skystarter.pythonanywhere.com'+userData.dp}></img>:
-                        <img src={user}></img>
+                        userData.dp!==null?  <img src={'https://skystarter.pythonanywhere.com'+userData.dp} alt='userdp' ></img>:
+                        <img src={user} alt='user-dp'></img>
                     }
                     {/* Hidden file input */}
                     <input

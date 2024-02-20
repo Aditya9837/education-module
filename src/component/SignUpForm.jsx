@@ -89,7 +89,7 @@ function SignUpForm() {
                 {/* Add your animation or image card here */}
                 
                 <div className="animation">
-                    <img src={logo} />
+                    <img src={logo}  alt='logo'/>
                 </div>
             </div>
             <div className="form-container">

@@ -796,11 +796,9 @@ p {
 
   .dashboard-container {
     position:absolute;
-    display: flex;
     flex-direction: column;
     justify-content: end;
     width: 30%;
-/* Adjust margin as needed */
     padding: 20px;
     margin-top: 5px;
     right: 60px;

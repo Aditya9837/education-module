@@ -2,8 +2,8 @@
 
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Style from './Style.css' // Import your CSS file for styling
-import logo from './image/logo.png';
+import  './Style.css' // Import your CSS file for styling
+// import logo from './image/logo.png';
 import Cookies from 'js-cookie';
 import { useNavigate } from 'react-router-dom';
 import Dashboard from './UserProfile';
@@ -72,7 +72,7 @@ function Header() {
 
                                     }}>{Cookies.get('userName').split(" ")[0]}&nbsp;<i id='down-arrow' class="ri-arrow-down-s-line"></i><i id='up-arrow' class="ri-arrow-up-s-line"></i></button>
                                 </li>
-                                <li><img className='cart-icon' src={cart}></img><span className='cart-bindi'></span></li>
+                                <li><img className='cart-icon' src={cart} alt='cart-icon'></img><span className='cart-bindi'></span></li>
 
                             </>
                         }

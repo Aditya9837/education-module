@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Style from './Style.css'; // Import CSS file for styling
+import  './Style.css'; // Import CSS file for styling
 import Cookies from 'js-cookie';
 import { useNavigate } from 'react-router-dom';
 

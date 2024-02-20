@@ -80,12 +80,12 @@ function HomePage() {
                     <h2>Students got placed after taking this course at...</h2>
                     <div className="testimonial-list">
                         <div className="testimonial-item">
-                            <img src={student1} alt="" />
+                            <img src={student1} alt="student1" />
                             <p>"This React course is fantastic for beginners. The instructor's clear explanations and hands-on projects make learning React enjoyable. "</p>
                             <span>- Gautam Kumar</span>
                         </div>
                         <div className="testimonial-item">
-                            <img src={student2} alt="" />
+                            <img src={student2} alt="student2" />
                             <p>"Clear explanations and practical examples make this Python course a great choice for beginners. Some pacing issues, but overall, it's a valuable resource for learning Python basics."</p>
                             <span>- Anshul Patel</span>
                         </div>

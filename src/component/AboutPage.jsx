@@ -14,12 +14,12 @@ function AboutPage() {
 </p>
                 </div>
                 <div className='right-card'>
-                    <img src={img} className='card-image'></img>
+                    <img src={img} className='card-image' alt='img'></img>
                 </div>
             </div>
             <div className='reverse'>
                 <div className='left-card'>
-                    <img src={mission} className='card-image'></img>
+                    <img src={mission} className='card-image' alt='mission'></img>
                 </div>
                 <div className='right-card about-center'>
                     <h1>Our Mission</h1>
@@ -36,12 +36,12 @@ function AboutPage() {
                     </p>
                 </div>
                 <div className='right-card'>
-                    <img src={vision} className='card-image'></img>
+                    <img src={vision} className='card-image' alt='vision'></img>
                 </div>
             </div>
             <div className='reverse'>
                 <div className='left-card'>
-                    <img src={team} className='card-image'></img>
+                    <img src={team} className='card-image' alt='team'></img>
                 </div>
                 <div className='right-card about-center'>
                     <h1>Our Team</h1>

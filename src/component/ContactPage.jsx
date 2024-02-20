@@ -1,7 +1,7 @@
 // ContactPage.js
 
 import React, { useState } from 'react';
-import Style from './Style.css'; // Import your CSS file for styling
+import  './Style.css'; // Import your CSS file for styling
 import logo from './image/logo.png'
 import { Link } from 'react-router-dom';
 import axios from 'axios';
@@ -35,7 +35,7 @@ function ContactPage() {
                 "Content-Type":'multipart/formdata'
             }
         }).then(response=>{
-            if(response.status==200){
+            if(response.status === 200){
                 setErrorMessage('Your message sent to our team. We will contact you soon.')
                 setName('')
                 setEmail('')
@@ -49,7 +49,7 @@ function ContactPage() {
                 {/* Add your animation or image card here */}
 
                 <div className="animation">
-                    <img src={logo} />
+                    <img src={logo} alt='logo' />
                 </div>
             </div>
             <div className="form-container">

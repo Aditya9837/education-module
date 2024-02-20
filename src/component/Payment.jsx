@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Style from './Style.css'; // Assuming you have your CSS styles defined in PaymentPage.css
+import './Style.css'; // Assuming you have your CSS styles defined in PaymentPage.css
 import useRazorpay from 'react-razorpay';
 import axios from 'axios';
 
@@ -50,7 +50,7 @@ function PaymentPage() {
       }
     const order = await createOrder(params); //  Create order on your backend
     console.log(order)
-    if(order==undefined){
+    if(order === undefined){
        setMessage('Already Enrolled')
     }
       else{
@@ -105,7 +105,7 @@ function PaymentPage() {
          <div id="course-details-container">
             <div id="course-detail">
                 <div id="course-image">
-                    <img src={'https://skystarter.pythonanywhere.com/'+data.course_img} alt="" />
+                    <img src={'https://skystarter.pythonanywhere.com/'+data.course_img} alt="course_img" />
                 </div>
                 <div id="course-title">
                    <h1>{data.course_title}</h1>

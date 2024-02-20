@@ -8,7 +8,7 @@ import SignUpForm from "./component/SignUpForm";
 import AllCoursesPage from "./component/AllCourses";
 import Payment from "./component/Payment";
 import CongratulationsPage from "./component/Congrates";
-import UserProfile from "./component/UserProfile";
+// import UserProfile from "./component/UserProfile";
 import Enrolled from "./component/Enrolled";
 
 

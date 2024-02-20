@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import Style from './Style.css'; // Import your CSS file for styling
+import './Style.css'; // Import your CSS file for styling
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import HomePage from './HomePage';
 import logo from './image/logo.png'
 import { Link } from 'react-router-dom';
 import Cookies from 'js-cookie';
@@ -46,7 +45,7 @@ function SignInForm() {
                 "Content-Type": 'multipart/formdata'
             }
           })
-          if(response.status==200)
+          if(response.status === 200)
           {
             console.log(response.data)
             
@@ -67,7 +66,7 @@ function SignInForm() {
 
         } catch(error) {
             console.log(error.response)
-            if(error.response.data['msg']=='You are not autherized user' || error.response.data['msg']==='Not Autherized')
+            if(error.response.data['msg'] === 'You are not autherized user' || error.response.data['msg']==='Not Autherized')
             {
                 setErrorMessage('Enter valid email address and password')
             }
@@ -86,7 +85,7 @@ function SignInForm() {
                 {/* Add your animation or image card here */}
                 
                 <div className="animation">
-                    <img src={logo} />
+                    <img src={logo} alt='logo' />
                 </div>
             </div>
             <div className="form-container">
